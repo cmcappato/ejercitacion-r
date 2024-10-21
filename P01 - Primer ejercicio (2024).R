@@ -72,6 +72,8 @@ MedianaHpAuto <- median(HpVehiculos)
 ModaHpAuto <- Mode(HpVehiculos)
 
 print(paste("Media:", MediaHpAuto, "Mediana:", MedianaHpAuto, "Moda:", ModaHpAuto)) # Este print muestra 3 resultados ya que hay 3 valores que son populares dentro del dataset
+sort(HpVehiculos)
+
 
 #8 (INVESTIGAR) Escribe un programa que contenga 3 vectores con 5 números al azar, luego, unir los tres vectores en una matriz, finalmente que muestre el contenido de la matriz, en cada ejecución la matriz debe cambiar (hint: cbind)
 
@@ -86,24 +88,216 @@ print(VectoresEnMatrizFinal)
 
 #9 - Usando el dataset nottem, escribir un programa que me indique la temperatura mas baja de todo el set, la máxima, y después la mínima y máxima por mes, y finalmente el mínimo, máximo y promedio por año.
 
-class(nottem)
-
 nottemcopy <- nottem
 nottemvector = as.numeric(nottemcopy)
-print(nottemvector)
+print(min(nottemvector))
+print(max(nottemvector))
 
 nottem1920 <- nottemvector[c(1:12)]
-print(nottem1920)
+print(min(nottem1920))
+print(max(nottem1920))
+print(mean(nottem1920))
+
 nottem1921 <- nottemvector[c(13:24)]
 print(nottem1921)
+print(min(nottem1921))
+print(max(nottem1921))
+print(mean(nottem1921))
+
+nottem1922 <- nottemvector[c(25:36)]
+print(nottem1922)
+print(min(nottem1922))
+print(max(nottem1922))
+print(mean(nottem1922))
+
+nottem1923 <- nottemvector[c(37:48)]
+print(nottem1923)
+print(min(nottem1923))
+print(max(nottem1923))
+print(mean(nottem1923))
+
+nottem1924 <- nottemvector[c(49:60)]
+print(nottem1924)
+print(min(nottem1924))
+print(max(nottem1924))
+print(mean(nottem1924))
+
+nottem1925 <- nottemvector[c(61:72)]
+print(nottem1925)
+print(min(nottem1925))
+print(max(nottem1925))
+print(mean(nottem1925))
+
+nottem1926 <- nottemvector[c(73:84)]
+print(nottem1926)
+print(min(nottem1926))
+print(max(nottem1926))
+print(mean(nottem1926))
+
+nottem1927 <- nottemvector[c(85:96)]
+print(nottem1927)
+print(min(nottem1927))
+print(max(nottem1927))
+print(mean(nottem1927))
+
+nottem1928 <- nottemvector[c(97:108)]
+print(nottem1928)
+print(min(nottem1928))
+print(max(nottem1928))
+print(mean(nottem1928))
+
+nottem1929 <- nottemvector[c(109:120)]
+print(nottem1929)
+print(min(nottem1929))
+print(max(nottem1929))
+print(mean(nottem1929))
+
+nottem1930 <- nottemvector[c(121:132)]
+print(nottem1930)
+print(min(nottem1930))
+print(max(nottem1930))
+print(mean(nottem1930))
+
+nottem1931 <- nottemvector[c(133:144)]
+print(nottem1931)
+print(min(nottem1931))
+print(max(nottem1931))
+print(mean(nottem1931))
+
+nottem1932 <- nottemvector[c(145:156)]
+print(nottem1932)
+print(min(nottem1932))
+print(max(nottem1932))
+print(mean(nottem1932))
+
+nottem1933 <- nottemvector[c(157:168)]
+print(nottem1933)
+print(min(nottem1933))
+print(max(nottem1933))
+print(mean(nottem1933))
+
+nottem1934 <- nottemvector[c(169:180)]
+print(nottem1934)
+print(min(nottem1934))
+print(max(nottem1934))
+print(mean(nottem1934))
+
+nottem1935 <- nottemvector[c(181:192)]
+print(nottem1935)
+print(min(nottem1935))
+print(max(nottem1935))
+print(mean(nottem1935))
+
+nottem1936 <- nottemvector[c(193:204)]
+print(nottem1936)
+print(min(nottem1936))
+print(max(nottem1936))
+print(mean(nottem1936))
+
+
+nottem1937 <- nottemvector[c(205:216)]
+print(nottem1937)
+print(min(nottem1937))
+print(max(nottem1937))
+print(mean(nottem1937))
+
+nottem1938 <- nottemvector[c(217:228)]
+print(nottem1938)
+print(min(nottem1938))
+print(max(nottem1938))
+print(mean(nottem1938))
+
+nottem1939 <- nottemvector[c(229:240)]
+print(nottem1939)
+print(min(nottem1939))
+print(max(nottem1939))
+print(mean(nottem1939))
+
+nottemJan <- nottemvector[c(1, 13, 25, 37, 49, 61, 73, 85, 97, 109, 121, 133, 145, 157, 169, 181, 193, 205, 217, 229)]
+print(min(nottemJan))
+print(max(nottemJan))
+
+nottemFeb <- nottemvector[c(2, 14, 26, 38, 50, 62, 74, 86, 98, 110, 122, 134, 146, 158, 170, 182, 194, 206, 218, 230)]
+print(min(nottemFeb))
+print(max(nottemFeb))
+
+nottemMar <- nottemvector[c(3, 15, 27, 39, 51, 63, 75, 87, 99, 111, 123, 135, 147, 159, 171, 183, 195, 207, 219, 231)]
+print(min(nottemMar))
+print(max(nottemMar))
+
+nottemApr <- nottemvector[c(4, 16, 28, 40, 52, 64, 76, 88, 100, 112, 124, 136, 148, 160, 172, 184, 196, 208, 220, 232)]
+print(min(nottemApr))
+print(max(nottemApr))
+
+nottemMay <- nottemvector[c(5, 17, 29, 41, 53, 65, 77, 89, 101, 113, 125, 137, 149, 161, 173, 185, 197, 209, 221, 233)]
+print(min(nottemMay))
+print(max(nottemMay))
+
+nottemJun <- nottemvector[c(6, 18, 30, 42, 54, 66, 78, 90, 102, 114, 126, 138, 150, 162, 174, 186, 198, 210, 222, 234)]
+print(min(nottemJun))
+print(max(nottemJun))
+
+nottemJul <- nottemvector[c(7, 19, 31, 43, 55, 67, 79, 91, 103, 115, 127, 139, 151, 163, 175, 187, 199, 211, 223, 235)]
+print(min(nottemJul))
+print(max(nottemJul))
+
+nottemAug <- nottemvector[c(8, 20, 32, 44, 56, 68, 80, 92, 104, 116, 128, 140, 152, 164, 176, 188, 200, 212, 224, 236)]
+print(min(nottemAug))
+print(max(nottemAug))
+
+nottemSep <- nottemvector[c(9, 21, 33, 45, 57, 69, 81, 93, 105, 117, 129, 141, 153, 165, 177, 189, 201, 213, 225, 237)]
+print(min(nottemSep))
+print(max(nottemSep))
+
+nottemOct <- nottemvector[c(10, 22, 34, 46, 58, 70, 82, 94, 106, 118, 130, 142, 154, 166, 178, 190, 202, 214, 226, 238)]
+print(min(nottemOct))
+print(max(nottemOct))
+
+nottemNov <- nottemvector[c(11, 23, 35, 47, 59, 71, 83, 95, 107, 119, 131, 143, 155, 167, 179, 191, 203, 215, 227, 239)]
+print(min(nottemNov))
+print(max(nottemNov))
+
+nottemDec <- nottemvector[c(12, 24, 36, 48, 60, 72, 84, 96, 108, 120, 132, 144, 156, 168, 180, 192, 204, 216, 228, 240)]
+print(min(nottemDec))
+print(max(nottemDec))
 
 #10 - Crear un dataset que contenga el nombre, apellido, edad, año de nacimiento, mes de nacimiento y día de nacimiento de cada miembro de su grupo. Puede hacerse directamente o con cbind. Una vez hecho, que muestre el contenido, que indique la edad máxima, la mínima y el promedio de edad del grupo.
 
-#11 - (INVESTIGAR) Usando el dataset creado en el ejercicio 10, imprimir el resumen de la información. Probar de hacer lo mismo con iris.
+InfoGrupo <- data.frame(Nombre = c("Carolina", "Rocio", "Florencia", "Cecilia", "Gaston", "Natalia"),
+                      Apellido = c("Cappato","Vazquez","Chirino", "Campos", "Ramirez", "Barron"),
+                      Edad = c(30, 37, 33, 34, 34, 30),
+                      Anio = c(1993, 1987, 1991, 1990, 1989, 1993),
+                      Mes = c(11, 2, 2, 1, 11, 10),
+                      Dia = c(22, 8, 22, 25, 3, 23))
+
+print(InfoGrupo)
+print(paste("Edad maxima: ", max(InfoGrupo$Edad)))
+print(paste("Edad minima: ", min(InfoGrupo$Edad)))
+print(paste("Promedio: ", mean(InfoGrupo$Edad)))
+
+#11 - (INVESTIGAR) Usando el dataset creado en el ejercicio 10, imprimir el resumen de la información. Probar de hacer lo mismo con iris
+
+InfoGrupo
+iris
 
 #12 Del set IRIS, ordenar indicar el promedio de longitud de pétalos, solamente de la especie setosa. Luego indicar el máximo de longitud de pétalo, solo de la especie virginica. (Se puede resolver solo con lo aclarado en esta guía pero hay formas mas elegantes de hacerlo)
 
+Setosas <- filter(iris, Species == "setosa") 
+LongitudPetalosSetosas <- sort(Setosas$Petal.Length)
+PromedioLongitudPetalosSetosa <- mean(LongitudPetalosSetosas)
+
+Virginica <- filter(iris, Species == "virginica") 
+LongitudMaximaPetalosVirginica <- max(Virginica$Petal.Length)
+
 #13 Usando el dataset de nhtemp, cual es el promedio total de temperaturas? cual es el promedio total de temperaturas entre 1912 y 1922, y cual es el promedio de temperaturas entre 1961 y 1971. En todos los casos, cual es el mínimo y el máximo.
+
+nhtempcopy <- nhtemp
+nhtempvector <- as.numeric(nhtempcopy)
+PromedioTemperaturas <- mean(nhtempvector)
+
+nhtemp1912a1922 <- nhtempvector[c(1:10)]
+PromedioTemperaturas1912a1922 <- mean(nhtemp1912a1922)
+
 
 #13 Usando el dataset mtcars, indicar cuantos vehículos tienen caja de cambios en números impares
 
