@@ -88,12 +88,12 @@ print(VectoresEnMatrizFinal)
 
 #9 - Usando el dataset nottem, escribir un programa que me indique la temperatura mas baja de todo el set, la máxima, y después la mínima y máxima por mes, y finalmente el mínimo, máximo y promedio por año.
 
-nottemcopy <- nottem
-nottemvector = as.numeric(nottemcopy)
+nottemcopy <- nottem # Realizo una copia del dataset para poder trabajarlo
+nottemvector = as.numeric(nottemcopy) # Lo convierto a numérico ya que el original es de tipo Time Series
 print(min(nottemvector))
 print(max(nottemvector))
 
-nottem1920 <- nottemvector[c(1:12)]
+nottem1920 <- nottemvector[c(1:12)] # Sirve para hacer una copia del vector, en este caso le indico el rango de posiciones. A diferencia de los arrays, en los vectores se empieza desde la posición 1 y no desde la posición 0
 print(min(nottem1920))
 print(max(nottem1920))
 print(mean(nottem1920))
@@ -213,7 +213,7 @@ print(min(nottem1939))
 print(max(nottem1939))
 print(mean(nottem1939))
 
-nottemJan <- nottemvector[c(1, 13, 25, 37, 49, 61, 73, 85, 97, 109, 121, 133, 145, 157, 169, 181, 193, 205, 217, 229)]
+nottemJan <- nottemvector[c(1, 13, 25, 37, 49, 61, 73, 85, 97, 109, 121, 133, 145, 157, 169, 181, 193, 205, 217, 229)] # Sirve para hacer una copia del vector, en este caso le indico las posiciones
 print(min(nottemJan))
 print(max(nottemJan))
 
@@ -277,8 +277,9 @@ print(paste("Promedio: ", mean(InfoGrupo$Edad)))
 
 #11 - (INVESTIGAR) Usando el dataset creado en el ejercicio 10, imprimir el resumen de la información. Probar de hacer lo mismo con iris
 
-InfoGrupo
-iris
+summary(InfoGrupo)
+summary(iris)
+
 
 #12 Del set IRIS, ordenar indicar el promedio de longitud de pétalos, solamente de la especie setosa. Luego indicar el máximo de longitud de pétalo, solo de la especie virginica. (Se puede resolver solo con lo aclarado en esta guía pero hay formas mas elegantes de hacerlo)
 
@@ -297,10 +298,31 @@ PromedioTemperaturas <- mean(nhtempvector)
 
 nhtemp1912a1922 <- nhtempvector[c(1:10)]
 PromedioTemperaturas1912a1922 <- mean(nhtemp1912a1922)
+Minimo1 <- min(nhtemp1912a1922)
+Maximo1 <- max(nhtemp1912a1922)
 
+nhtemp1961a1971 <- nhtempvector[c(51:60)]
+PromedioTemperaturas1961a1971 <- mean(nhtemp1961a1971)
+Minimo2 <- min(nhtemp1961a1971)
+Maximo2 <- max(nhtemp1961a1971)
 
 #13 Usando el dataset mtcars, indicar cuantos vehículos tienen caja de cambios en números impares
 
-#14 Calcular la relación entre los cilindros y el hp de los vehículos en mtcars y mostrarlo. Luego calcular, modo, mediana y promedio
+CajaDeCambiosImpar <- filter(mtcars, gear %% 2 != 0)
+print(count(CajaDeCambiosImpar))
+
+#14 Calcular la relación entre los cilindros y el hp de los vehículos en mtcars y mostrarlo. Luego calcular, moda, mediana y promedio
+
+Cilindradas <- mtcars$cyl
+CaballosDeFuerza <- mtcars$hp
+plot(Cilindradas, CaballosDeFuerza)
+
+PromedioCilindradas <- mean(Cilindradas)
+ModaCilindradas <- Mode(Cilindradas)
+MedianaCilindradas <- median(Cilindradas)
+
+PromedioCaballosDeFuerza <- mean(CaballosDeFuerza)
+ModaCaballosDeFuerza <- Mode(CaballosDeFuerza)
+MedianaCaballosDeFuerza <- median(CaballosDeFuerza)
 
 #15 - Usando cualquier dataset en datasets::, hacer un estudio aplicando todo lo visto hasta ahora, este ejercicio es libre, pero se pide al menos un resumen, mediana, modo, promedio, alguna relación, top de información, etc. Esta información tiene que tener sentido y ser consistente dentro de los datos analizados.
